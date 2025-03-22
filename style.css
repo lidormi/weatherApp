@@ -1,18 +1,20 @@
 *{
     margin: 0;
     padding: 0;
-    font-family:'poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
 body{
     background: #222;
 }
+
+/* Card Styles */
 .card{
     width: 90%;
     max-width: 470px;
     background: linear-gradient(135deg , #00feba , #355);
-    color:white;
+    color: white;
     margin: 100px auto 0;
     border-radius: 20px;
     padding: 40px 35px;
@@ -36,8 +38,9 @@ body{
     border-radius: 30px;
     flex: 1;
     margin-right: 16px;
-    font-size: -18px;
+    font-size: 18px; /* Fixed the font-size typo */
 }
+
 .search button{
     border: 0;
     outline: 0;
@@ -56,9 +59,10 @@ body{
     width: 170px;
     margin-top: 30px;
 }
+
 .weather h1{
     font-size: 80px;
-    font-weight: 450px;
+    font-weight: 450;
 }
 
 .weather h2{
@@ -90,19 +94,98 @@ body{
     font-size: 16px;
     margin-top: -6px;
 }
+
 .weather{
     display: none;
 }
+
 .error{
     text-align: left;
     margin-left: 10px;
     font-size: 14px;
     margin-top: 10px;
 }
+
 .name{
-   
     text-align: center;
     color: white;
     font-size: 14px;
     margin-top: 10px;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    .card {
+        margin-top: 20px;
+        padding: 20px 15px;
+    }
+
+    .search input {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .weather-icon {
+        width: 140px;
+    }
+
+    .weather h1 {
+        font-size: 60px;
+    }
+
+    .weather h2 {
+        font-size: 36px;
+    }
+
+    .details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .col {
+        margin-bottom: 10px;
+    }
+
+    .humidity, .wind {
+        font-size: 14px;
+    }
+
+    .error {
+        font-size: 12px;
+    }
+
+    .name {
+        font-size: 12px;
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .card {
+        padding: 30px 25px;
+    }
+
+    .search input {
+        font-size: 17px;
+    }
+
+    .weather-icon {
+        width: 160px;
+    }
+
+    .weather h1 {
+        font-size: 70px;
+    }
+
+    .weather h2 {
+        font-size: 40px;
+    }
+
+    .details {
+        flex-direction: row;
+    }
+
+    .humidity, .wind {
+        font-size: 15px;
+    }
 }
